@@ -1,0 +1,86 @@
+<!--
+    NOTE THAT WE'RE NOT DEFINING NEITHER <FORM></FORM> AND <INPUT TYPE="HIDDEN" NAME="MAX_FILE_SIZE">
+    BOTH BEING IN THE MAIN TEMPLATE IN THE /TEMPLATES FOLDER
+-->
+
+<!-- BEGIN: main -->
+<table Border=1 Width=100%> 
+ <tr>
+   <th align="left">
+     {controls.label_cedula}:&nbsp;
+   </th>
+   <th align="left">
+     {controls.cedula}
+   </th>
+   <td>
+    <th align="left">
+      {controls.submit_buscar}
+    </th>
+   </td>      
+ </tr>    
+ <tr>
+  <th align="left">
+   {controls.label_nombre}:&nbsp;
+  </th>
+  <th aling="left">
+    {controls.nombre}
+  </th>
+  <tr>
+</table>
+<table Border=1 Width=100%> 
+ <tr>
+  <th align="center">
+      {controls.label_titulo1}&nbsp;
+  </th>
+  </tr>
+</table>
+<table Border=1 Width=100%> 
+ <th align="left">
+  {controls.label_fechaadelanto}:&nbsp;
+ </th>
+<th align="left">
+   {controls.fechaadelanto}
+ </th>
+ <tr>
+  <td align="left">
+    {controls.label_saldoprestacion}:&nbsp;
+  </td>
+      <td aling="left">
+        {controls.saldoprestacion}
+      </td>
+    </tr>
+   <tr>
+        <td aling="left">
+            {controls.label_montomaxadelanto}:&nbsp;
+        </td>
+        <td aling="left">
+            {controls.montomaxadelanto}
+        </td>
+    </tr>
+</table>
+<table Border=1 Width=100%> 
+ <tr>
+  <th align="center">
+      {controls.label_titulo2}&nbsp;
+  </th>
+  </tr>
+</table>
+<table Border=1 Width=100%> 
+ <tr>
+     <th align="left">
+        {controls.label_montoadelanto}:&nbsp;
+     </th>
+     <th align="left">
+      {controls.montoadelanto}
+     </th>
+    <th align="left">
+        {controls.submit_procesar}
+     </th>
+   </tr>    
+<!-- END: e1 -->
+<!-- BEGIN: e1 -->     
+      <th align="center">
+        {errors.e1}
+      </th>    
+</table>
+<!-- END: main -->

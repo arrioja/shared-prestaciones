@@ -1,0 +1,9 @@
+version 1.0 BETA 2 (January 03, 2007)
+
+    -   in Firefox, trying to open the date picker would produce a JavaScript error
+    -   the icon for opening the date picker was not visible in Firefox
+
+version 1.0 BETA (December 19, 2006)
+
+    -   initial release
+

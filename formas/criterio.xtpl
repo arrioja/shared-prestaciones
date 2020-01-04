@@ -1,0 +1,39 @@
+<!--
+    NOTE THAT WE'RE NOT DEFINING NEITHER <FORM></FORM> AND <INPUT TYPE="HIDDEN" NAME="MAX_FILE_SIZE">
+    BOTH BEING IN THE MAIN TEMPLATE IN THE /TEMPLATES FOLDER
+-->
+
+<!-- BEGIN: main -->
+<table aling="center" border="0" bgcolor="#E8F2FC" width="100%"> 
+  <tr><th align="left">{controls.label_fecharesolucion}:&nbsp;</th>
+     <th align="left">{controls.fecharesolucion}</th>
+ <!-- BEGIN: e1 -->
+     <th aling="left">{errors.e1}</th></tr>
+ <!-- END: e1 -->  
+ <tr><th align="left">{controls.label_periodo}:&nbsp;</th>
+     <th align="left">{controls.periodo}</th>
+ <!-- BEGIN: e2 -->
+     <th aling="left">{errors.e2}</th></tr>
+ <!-- END: e2 -->  
+ <tr><th align="left">{controls.label_diasdisfrute}:&nbsp;</th>
+     <th align="left">{controls.diasdisfrute}</th>
+ <!-- BEGIN: e3 -->
+     <th aling="left">{errors.e3}</th></tr>
+ <!-- END: e3 -->  
+ <tr><th align="left">{controls.label_diaspagados}:&nbsp;</th>
+     <th align="left">{controls.diaspagados}</th>
+ <!-- BEGIN: e4 -->
+     <th aling="left">{errors.e4}</th></tr>
+ <!-- END: e4 -->  
+<tr><th align="left">{controls.label_estado}:&nbsp;</th>
+     <th align="left">{controls.estado}</th>
+ <!-- BEGIN: e5 -->
+     <th aling="left">{errors.e5}</th></tr>
+ <!-- END: e5 -->   
+ <tr><td><th align="right">{controls.submit_aceptar}</th>
+         <th align="left">{controls.reset_cancelar}</th>
+     </td></tr>
+</table>
+<!-- END: main -->
+
+ 

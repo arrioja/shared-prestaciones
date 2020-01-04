@@ -1,0 +1,25 @@
+<!--
+    NOTE THAT WE'RE NOT DEFINING NEITHER <FORM></FORM> AND <INPUT TYPE="HIDDEN" NAME="MAX_FILE_SIZE">
+    BOTH BEING IN THE MAIN TEMPLATE IN THE /TEMPLATES FOLDER
+-->
+
+<!-- BEGIN: main -->
+<table aling=center border=0 bgcolor='#E8F2FC' width=100%> 
+  <tr bgcolor='#A4B4C1'><td colspan=5 align=left><strong><font size=3>Datos del Salario</font></strong></td><tr bgcolor='#E8F2FC'>
+    <td align="right" width="10%">{controls.label_ano}:&nbsp;</td>
+    <td align="left">{controls.ano}</td>
+    <td align="left" width="100%">{errors.e1}</td>
+  <tr><td align="right">{controls.label_mes}:&nbsp;</td>
+      <td align="left">{controls.mes}</td> 
+      <td align="left">{errors.e2}</td></tr> 
+  <tr><td align="right">{controls.label_estatus}:&nbsp;</td>
+       <td aling="left">{controls.situacion}</td>
+       <th align="left">{errors.e3}</th></tr>
+  <tr><th width="30%"><td width="10%"></td>
+    <td align="right" width="80%">{controls.submit_consultar}</td></th>
+  </tr>   
+</table>
+<table align=center border=0 bgcolor='#E8F2FC' width=100%>  
+ <tr bgcolor='#A4B4C1'><td colspan=5 align=center><strong><font size=3>Disposiciones Transitorias</font></strong></td><tr bgcolor='#E8F2FC'>
+     
+<!-- END: main -->

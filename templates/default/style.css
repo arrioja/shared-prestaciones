@@ -1,0 +1,156 @@
+.HTMLForm-calendarIcon
+{
+    background-image: url(calendar_icon.gif);
+    background-repeat: no-repeat;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+    position: relative;
+    float: left;
+}
+.HTMLForm-fieldset
+{
+    border: 1px solid #666666;
+    background-color: #f4f4f4;
+}
+
+.HTMLForm-fieldset-legend
+{
+    font-family: tahoma, verdana, arial, sans;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 2px 5px 2px 5px;
+    background-color: #666699;
+    border-bottom: 1px solid #666666;
+    color: #ffffff;
+}
+
+.HTMLForm-label
+{
+    font-family: tahoma, verdana, arial, sans;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.HTMLForm-text
+{
+    font-family: tahoma, verdana, arial, sans;
+    font-size: 13px;
+    border: 1px solid #666666;
+    padding: 2px 4px 2px 4px;
+    height: 22px;
+}
+
+.HTMLForm-text-focus
+{
+    font-family: tahoma, verdana, arial, sans;
+    font-size: 13px;
+    border: 1px solid #666666;
+    background-color: #ccccff;
+    padding: 2px 4px 2px 4px;
+    height: 22px;
+}
+
+.HTMLForm-file
+{
+    font-family: tahoma, verdana, arial, sans;
+    font-size: 13px;
+    border: 1px solid #666666;
+    padding: 2px 4px 2px 4px;
+    height: 22px;
+}
+
+.HTMLForm-file-focus
+{
+    font-family: tahoma, verdana, arial, sans;
+    font-size: 13px;
+    border: 1px solid #666666;
+    background-color: #ccccff;
+    padding: 2px 4px 2px 4px;
+    height: 22px;
+}
+
+.HTMLForm-date
+{
+    font-family: tahoma, verdana, arial, sans;
+    font-size: 13px;
+    border: 1px solid #666666;
+    padding: 2px 4px 2px 4px;
+    height: 22px;
+    float:left;
+}
+
+.HTMLForm-date-focus
+{
+    font-family: tahoma, verdana, arial, sans;
+    font-size: 13px;
+    border: 1px solid #666666;
+    background-color: #ccccff;
+    padding: 2px 4px 2px 4px;
+    height: 22px;
+    float:left;
+}
+
+.HTMLForm-textarea
+{
+    font-family: tahoma, verdana, arial, sans;
+    font-size: 13px;
+    border: 1px solid #666666;
+    padding: 2px 4px 2px 4px;
+}
+
+.HTMLForm-textarea-focus
+{
+    font-family: tahoma, verdana, arial, sans;
+    font-size: 13px;
+    border: 1px solid #666666;
+    padding: 2px 4px 2px 4px;
+    background-color: #ccccff;
+}
+
+.HTMLForm-password
+{
+    font-family: tahoma, verdana, arial, sans;
+    font-size: 13px;
+    border: 1px solid #666666;
+    padding: 2px 4px 2px 4px;
+    height: 22px;
+}
+
+.HTMLForm-password-focus
+{
+    font-family: tahoma, verdana, arial, sans;
+    font-size: 13px;
+    border: 1px solid #666666;
+    padding: 2px 4px 2px 4px;
+    height: 22px;
+    background-color: #ccccff;
+}
+
+.HTMLForm-submit
+{
+    border: 1px solid #ffffff;
+    background-color: #ff6600;
+    font-weight: bold;
+    color: #ffffff;
+}
+.HTMLForm-error-message
+{
+    background-image: url(alert.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding: 3px 0 0 26px;
+    height: 24px;
+    font-family: helvetica;
+    font-size: 13px;
+    color: #c40000;
+    font-weight: bold;
+}
+.HTMLForm-select
+{
+    font-family: tahoma, verdana, arial, sans;
+    font-size: 13px;
+    border: 1px solid #666666;
+    padding: 2px 4px 2px 4px;
+    height: 22px;
+}

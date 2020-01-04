@@ -1,0 +1,239 @@
+<html>
+<head>
+<title>File Source for class.datepicker.php</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">datePicker</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+  		  [ <a href="../classtrees_datePicker.html" class="menu">class tree: datePicker</a> ]
+		  [ <a href="../elementindex_datePicker.html" class="menu">index: datePicker</a> ]
+		  [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+	<div id="ric">
+					<p><a href="../ric_ChangeLog.html">ChangeLog</a></p>
+					<p><a href="../ric_License.html">License</a></p>
+					<p><a href="../ric_ReadMe.html">ReadMe</a></p>
+			</div>
+      <b>Packages:</b><br />
+              <a href="../li_datePicker.html">datePicker</a><br />
+            <br /><br />
+                  
+      
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1 align="center">Source for file class.datepicker.php</h1>
+<p>Documentation is available at <a href="../datePicker/_class.datepicker.php.html">class.datepicker.php</a></p>
+<div class="src-code">
+<ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;A&nbsp;PHP&nbsp;class&nbsp;providing&nbsp;access&nbsp;to&nbsp;a&nbsp;date&nbsp;picker</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;provides&nbsp;a&nbsp;very&nbsp;nice&nbsp;and&nbsp;intuitive&nbsp;date&nbsp;picker</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;you&nbsp;can&nbsp;set&nbsp;what&nbsp;month&nbsp;and/or&nbsp;year&nbsp;to&nbsp;show&nbsp;by&nbsp;default</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;you&nbsp;can&nbsp;set&nbsp;mark&nbsp;a&nbsp;day&nbsp;as&nbsp;selected&nbsp;by&nbsp;default</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;you&nbsp;can&nbsp;set&nbsp;specific&nbsp;date&nbsp;ranges&nbsp;from&nbsp;where&nbsp;the&nbsp;user&nbsp;can&nbsp;choose&nbsp;from</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;you&nbsp;can&nbsp;set&nbsp;the&nbsp;format&nbsp;of&nbsp;the&nbsp;date&nbsp;to&nbsp;be&nbsp;returned</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;you&nbsp;can&nbsp;set&nbsp;any&nbsp;day&nbsp;to&nbsp;be&nbsp;taken&nbsp;as&nbsp;the&nbsp;starting&nbsp;day&nbsp;of&nbsp;the&nbsp;week</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;everything&nbsp;is&nbsp;template&nbsp;driven&nbsp;and&nbsp;highly&nbsp;customizable</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;supports&nbsp;localisation</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;the&nbsp;code&nbsp;is&nbsp;heavily&nbsp;documented&nbsp;so&nbsp;you&nbsp;can&nbsp;easily&nbsp;understand&nbsp;every&nbsp;aspect&nbsp;of&nbsp;it</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;See&nbsp;the&nbsp;manual&nbsp;for&nbsp;more&nbsp;info.</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;This&nbsp;work&nbsp;is&nbsp;licensed&nbsp;under&nbsp;the&nbsp;Creative&nbsp;Commons&nbsp;Attribution-NonCommercial-NoDerivs&nbsp;2.5&nbsp;License.</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;To&nbsp;view&nbsp;a&nbsp;copy&nbsp;of&nbsp;this&nbsp;license,&nbsp;visit&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;http://creativecommons.org/licenses/by-nc-nd/2.5/}</span><span class="src-doc">&nbsp;or&nbsp;send&nbsp;a&nbsp;letter&nbsp;to</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;Creative&nbsp;Commons,&nbsp;543&nbsp;Howard&nbsp;Street,&nbsp;5th&nbsp;Floor,&nbsp;San&nbsp;Francisco,&nbsp;California,&nbsp;94105,&nbsp;USA.</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;For&nbsp;more&nbsp;resources&nbsp;visit&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;http://stefangabos.blogspot.com}</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stefan&nbsp;Gabos&nbsp;&lt;ix@nivelzero.ro&gt;</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;</span><span class="src-doc-coretag">@version</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;1.0.3&nbsp;(last&nbsp;revision:&nbsp;November&nbsp;03,&nbsp;2006)</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;</span><span class="src-doc-coretag">@copyright</span><span class="src-doc">&nbsp;&nbsp;(c)&nbsp;2006&nbsp;Stefan&nbsp;Gabos</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;datePicker</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;</span><span class="src-doc-coretag">@example</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;example.php</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a31"></a><a href="http://www.php.net/error_reporting">error_reporting</a><span class="src-sym">(</span><span class="src-id">E_ALL</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a32"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-key">class&nbsp;</span><a href="../datePicker/datePicker.html">datePicker</a></div></li>
+<li><div class="src-line"><a name="a34"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a35"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a36"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a37"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;An&nbsp;indexed&nbsp;array&nbsp;of&nbsp;selectable&nbsp;ranges&nbsp;where&nbsp;the&nbsp;key&nbsp;is&nbsp;the&nbsp;date&nbsp;representing&nbsp;the&nbsp;start&nbsp;of&nbsp;the&nbsp;range&nbsp;(inclusive)</span></div></li>
+<li><div class="src-line"><a name="a38"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;and&nbsp;the&nbsp;value&nbsp;is&nbsp;the&nbsp;date&nbsp;representing&nbsp;the&nbsp;end&nbsp;of&nbsp;the&nbsp;range&nbsp;(inclusive)</span></div></li>
+<li><div class="src-line"><a name="a39"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a40"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;An&nbsp;unlimited&nbsp;number&nbsp;of&nbsp;ranges&nbsp;can&nbsp;be&nbsp;specified.</span></div></li>
+<li><div class="src-line"><a name="a41"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a42"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;In&nbsp;the&nbsp;example&nbsp;below&nbsp;we'll&nbsp;allow&nbsp;the&nbsp;user&nbsp;to&nbsp;select&nbsp;a&nbsp;date&nbsp;between&nbsp;tomorrow&nbsp;and&nbsp;the&nbsp;following&nbsp;10&nbsp;days</span></div></li>
+<li><div class="src-line"><a name="a43"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a44"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&lt;code&gt;</span></div></li>
+<li><div class="src-line"><a name="a45"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dp-&gt;selectableRange&nbsp;=</span></div></li>
+<li><div class="src-line"><a name="a46"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(mktime()=&gt;strtotime(&quot;+10&nbsp;days&quot;,&nbsp;mktime()));</span></div></li>
+<li><div class="src-line"><a name="a47"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&lt;/code&gt;</span></div></li>
+<li><div class="src-line"><a name="a48"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a49"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&lt;b&gt;Dates&nbsp;must&nbsp;be&nbsp;specified&nbsp;as&nbsp;unix&nbsp;timestamps!&lt;/b&gt;</span></div></li>
+<li><div class="src-line"><a name="a50"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a51"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;</span><span class="src-doc-coretag">@since</span><span class="src-doc">&nbsp;1.0.2</span></div></li>
+<li><div class="src-line"><a name="a52"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a53"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">array&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a54"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a55"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../datePicker/datePicker.html#var$selectableRange">$selectableRange</a><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a56"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a57"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a58"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Preselects&nbsp;a&nbsp;date&nbsp;in&nbsp;the&nbsp;calendar</span></div></li>
+<li><div class="src-line"><a name="a59"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a60"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&lt;b&gt;The&nbsp;date&nbsp;must&nbsp;be&nbsp;specified&nbsp;as&nbsp;a&nbsp;timestamp!&lt;/b&gt;</span></div></li>
+<li><div class="src-line"><a name="a61"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a62"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">string&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a63"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a64"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../datePicker/datePicker.html#var$preselectedDate">$preselectedDate</a><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a65"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a66"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a67"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Format&nbsp;of&nbsp;the&nbsp;returned&nbsp;day</span></div></li>
+<li><div class="src-line"><a name="a68"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a69"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Any&nbsp;combination&nbsp;allowed&nbsp;by&nbsp;PHP&nbsp;date()&nbsp;function&nbsp;can&nbsp;be&nbsp;used</span></div></li>
+<li><div class="src-line"><a name="a70"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a71"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;default&nbsp;is&nbsp;&quot;m&nbsp;d&nbsp;Y&quot;</span></div></li>
+<li><div class="src-line"><a name="a72"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a73"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">string&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a74"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a75"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../datePicker/datePicker.html#var$dateFormat">$dateFormat</a><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a76"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a77"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a78"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;What&nbsp;day&nbsp;should&nbsp;be&nbsp;taken&nbsp;as&nbsp;the&nbsp;first&nbsp;day&nbsp;of&nbsp;week</span></div></li>
+<li><div class="src-line"><a name="a79"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a80"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Possible&nbsp;values&nbsp;range&nbsp;from&nbsp;0&nbsp;(Sunday)&nbsp;to&nbsp;6&nbsp;(Saturday)</span></div></li>
+<li><div class="src-line"><a name="a81"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a82"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;default&nbsp;is&nbsp;0</span></div></li>
+<li><div class="src-line"><a name="a83"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a84"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-type">integer&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a85"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a86"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../datePicker/datePicker.html#var$firstDayOfWeek">$firstDayOfWeek</a><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a87"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a88"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a89"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Weather&nbsp;a&nbsp;&quot;clear&nbsp;date&quot;&nbsp;button&nbsp;should&nbsp;be&nbsp;displayed&nbsp;or&nbsp;not&nbsp;on&nbsp;the&nbsp;calendar</span></div></li>
+<li><div class="src-line"><a name="a90"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a91"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;default&nbsp;is&nbsp;FALSE</span></div></li>
+<li><div class="src-line"><a name="a92"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a93"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">boolean&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a94"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a95"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../datePicker/datePicker.html#var$showClearDate">$showClearDate</a><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a96"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a97"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a98"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Height&nbsp;of&nbsp;the&nbsp;calendar&nbsp;window</span></div></li>
+<li><div class="src-line"><a name="a99"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a100"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;default&nbsp;is&nbsp;210</span></div></li>
+<li><div class="src-line"><a name="a101"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a102"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">integer&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a103"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a104"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../datePicker/datePicker.html#var$windowHeight">$windowHeight</a><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a105"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a106"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a107"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Width&nbsp;of&nbsp;the&nbsp;calendar&nbsp;window</span></div></li>
+<li><div class="src-line"><a name="a108"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a109"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;default&nbsp;is&nbsp;180</span></div></li>
+<li><div class="src-line"><a name="a110"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a111"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">integer&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a112"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a113"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../datePicker/datePicker.html#var$windowWidth">$windowWidth</a><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a114"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a115"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a116"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Language&nbsp;file&nbsp;to&nbsp;use</span></div></li>
+<li><div class="src-line"><a name="a117"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a118"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;php&nbsp;language&nbsp;file&nbsp;you&nbsp;wish&nbsp;to&nbsp;use&nbsp;from&nbsp;the&nbsp;/languages&nbsp;folder.</span></div></li>
+<li><div class="src-line"><a name="a119"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a120"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Without&nbsp;the&nbsp;extension!&nbsp;(i.e.&nbsp;&quot;german&quot;&nbsp;for&nbsp;the&nbsp;german&nbsp;language&nbsp;not&nbsp;&quot;german.php&quot;)</span></div></li>
+<li><div class="src-line"><a name="a121"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a122"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;default&nbsp;is&nbsp;&quot;english&quot;</span></div></li>
+<li><div class="src-line"><a name="a123"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a124"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc">&nbsp;&nbsp;</span><span class="src-doc-type">string&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a125"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a126"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../datePicker/datePicker.html#var$language">$language</a><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a127"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a128"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a129"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Template&nbsp;folder&nbsp;to&nbsp;use</span></div></li>
+<li><div class="src-line"><a name="a130"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a131"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Note&nbsp;that&nbsp;only&nbsp;the&nbsp;folder&nbsp;of&nbsp;the&nbsp;template&nbsp;you&nbsp;wish&nbsp;to&nbsp;use&nbsp;needs&nbsp;to&nbsp;be&nbsp;specified.&nbsp;Inside&nbsp;the&nbsp;folder</span></div></li>
+<li><div class="src-line"><a name="a132"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;you&nbsp;&lt;b&gt;must&lt;/b&gt;&nbsp;have&nbsp;the&nbsp;&lt;b&gt;template.xtpl&lt;/b&gt;&nbsp;file&nbsp;which&nbsp;will&nbsp;be&nbsp;automatically&nbsp;loaded</span></div></li>
+<li><div class="src-line"><a name="a133"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a134"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;default&nbsp;is&nbsp;&quot;default&quot;</span></div></li>
+<li><div class="src-line"><a name="a135"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a136"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc">&nbsp;&nbsp;</span><span class="src-doc-type">string&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a137"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a138"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../datePicker/datePicker.html#var$template">$template</a><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a139"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a140"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a141"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Constructor&nbsp;of&nbsp;the&nbsp;class</span></div></li>
+<li><div class="src-line"><a name="a142"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a143"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">void&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a144"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a145"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../datePicker/datePicker.html#methoddatePicker">datePicker</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a146"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a147"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a148"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;default&nbsp;values&nbsp;to&nbsp;properties</span></div></li>
+<li><div class="src-line"><a name="a149"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../datePicker/datePicker.html#var$preselectedDate">preselectedDate</a>&nbsp;=&nbsp;<span class="src-str">&quot;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a150"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../datePicker/datePicker.html#var$selectableRange">selectableRange</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a151"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../datePicker/datePicker.html#var$dateFormat">dateFormat</a>&nbsp;=&nbsp;<span class="src-str">&quot;m&nbsp;d&nbsp;Y&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a152"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../datePicker/datePicker.html#var$firstDayOfWeek">firstDayOfWeek</a>&nbsp;=&nbsp;<span class="src-num">0</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a153"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../datePicker/datePicker.html#var$windowHeight">windowHeight</a>&nbsp;=&nbsp;<span class="src-num">210</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a154"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../datePicker/datePicker.html#var$windowWidth">windowWidth</a>&nbsp;=&nbsp;<span class="src-num">180</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a155"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../datePicker/datePicker.html#var$language">language</a>&nbsp;=&nbsp;<span class="src-str">&quot;english&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a156"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../datePicker/datePicker.html#var$template">template</a>&nbsp;=&nbsp;<span class="src-str">&quot;default&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a157"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../datePicker/datePicker.html#var$showClearDate">showClearDate</a>&nbsp;=&nbsp;<span class="src-id">true</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a158"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a159"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;get&nbsp;the&nbsp;absolute&nbsp;path&nbsp;of&nbsp;the&nbsp;class.&nbsp;any&nbsp;further&nbsp;includes&nbsp;rely&nbsp;on&nbsp;this</span></div></li>
+<li><div class="src-line"><a name="a160"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;and&nbsp;(on&nbsp;a&nbsp;windows&nbsp;machine)&nbsp;replace&nbsp;\&nbsp;with&nbsp;/</span></div></li>
+<li><div class="src-line"><a name="a161"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">absolutePath&nbsp;</span>=&nbsp;<a href="http://www.php.net/preg_replace">preg_replace</a><span class="src-sym">(</span><span class="src-str">&quot;/\\\/&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;/&quot;</span><span class="src-sym">,&nbsp;</span><a href="http://www.php.net/dirname">dirname</a><span class="src-sym">(</span>__FILE__<span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a162"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a163"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;remove&nbsp;$_SERVER[&quot;DOCUMENT_ROOT&quot;]&nbsp;from&nbsp;the&nbsp;path</span></div></li>
+<li><div class="src-line"><a name="a164"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;this&nbsp;path&nbsp;is&nbsp;to&nbsp;be&nbsp;used&nbsp;from&nbsp;within&nbsp;HTML&nbsp;as&nbsp;it&nbsp;is&nbsp;a&nbsp;relative&nbsp;path</span></div></li>
+<li><div class="src-line"><a name="a165"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">strippedPath&nbsp;</span>=&nbsp;<a href="http://www.php.net/preg_replace">preg_replace</a><span class="src-sym">(</span><span class="src-str">&quot;/&quot;</span>.<a href="http://www.php.net/preg_replace">preg_replace</a><span class="src-sym">(</span><span class="src-str">&quot;/\//&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;\/&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-var">$_SERVER</span><span class="src-sym">[</span><span class="src-str">&quot;DOCUMENT_ROOT&quot;</span><span class="src-sym">]</span><span class="src-sym">)</span>.<span class="src-str">&quot;/i&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">absolutePath</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a166"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a167"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a168"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a169"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Returns&nbsp;the&nbsp;JavaScript&nbsp;code&nbsp;that&nbsp;will&nbsp;open&nbsp;the&nbsp;pop-up&nbsp;window&nbsp;containing&nbsp;the&nbsp;calendar</span></div></li>
+<li><div class="src-line"><a name="a170"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a171"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc">&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">&nbsp;</span><span class="src-doc-var">$controlID&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;ID&nbsp;of&nbsp;the&nbsp;HTML&nbsp;element&nbsp;(textbox&nbsp;or&nbsp;textarea)&nbsp;where&nbsp;to&nbsp;return&nbsp;the&nbsp;selected&nbsp;value</span></div></li>
+<li><div class="src-line"><a name="a172"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc">&nbsp;</span><span class="src-doc-type">integer&nbsp;</span><span class="src-doc-var">$startMonth&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;(optional)&nbsp;which&nbsp;month&nbsp;to&nbsp;start&nbsp;the&nbsp;calendar&nbsp;from</span></div></li>
+<li><div class="src-line"><a name="a173"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc">&nbsp;</span><span class="src-doc-type">integer&nbsp;</span><span class="src-doc-var">$startYear&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(optional)&nbsp;which&nbsp;year&nbsp;to&nbsp;start&nbsp;the&nbsp;calendar&nbsp;from</span></div></li>
+<li><div class="src-line"><a name="a174"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a175"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">void&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a176"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a177"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../datePicker/datePicker.html#methodshow">show</a><span class="src-sym">(</span><span class="src-var">$controlID</span><span class="src-sym">,&nbsp;</span><span class="src-var">$startMonth&nbsp;</span>=&nbsp;<span class="src-str">&quot;&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-var">$startYear&nbsp;</span>=&nbsp;<span class="src-str">&quot;&quot;</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a178"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a179"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-str">&quot;javascript:var&nbsp;cw&nbsp;=&nbsp;null;&nbsp;cw&nbsp;=&nbsp;window.open('&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">strippedPath</span>.<span class="src-str">&quot;/includes/datepicker.php?preselectedDate=&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../datePicker/datePicker.html#var$preselectedDate">preselectedDate</a>.<span class="src-str">&quot;&amp;selectableRange=&quot;</span>.<a href="http://www.php.net/urlencode">urlencode</a><span class="src-sym">(</span><a href="http://www.php.net/htmlspecialchars">htmlspecialchars</a><span class="src-sym">(</span><a href="http://www.php.net/serialize">serialize</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../datePicker/datePicker.html#var$selectableRange">selectableRange</a><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-id">ENT_COMPAT</span><span class="src-sym">))</span>.<span class="src-str">&quot;&amp;month=&quot;</span>.<span class="src-var">$startMonth</span>.<span class="src-str">&quot;&amp;year=&quot;</span>.<span class="src-var">$startYear</span>.<span class="src-str">&quot;&amp;controlName=&quot;</span>.<span class="src-var">$controlID</span>.<span class="src-str">&quot;&amp;dateFormat=&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../datePicker/datePicker.html#var$dateFormat">dateFormat</a>.<span class="src-str">&quot;&amp;firstDayOfWeek=&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../datePicker/datePicker.html#var$firstDayOfWeek">firstDayOfWeek</a>.<span class="src-str">&quot;&amp;clearDateButton=&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../datePicker/datePicker.html#var$showClearDate">showClearDate</a>.<span class="src-str">&quot;&amp;language=&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../datePicker/datePicker.html#var$language">language</a>.<span class="src-str">&quot;&amp;template=&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../datePicker/datePicker.html#var$template">template</a>.<span class="src-str">&quot;','datePicker','width=&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../datePicker/datePicker.html#var$windowWidth">windowWidth</a>.<span class="src-str">&quot;,height=&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../datePicker/datePicker.html#var$windowHeight">windowHeight</a>.<span class="src-str">&quot;,scrollbars=no,toolbar=no,menubar=no,location=no,alwaysraised=yes,modal=yes');&nbsp;if&nbsp;(window.focus)&nbsp;{&nbsp;cw.focus()&nbsp;}&nbsp;return&nbsp;false&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a180"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a181"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a182"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a183"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a184"></a><span class="src-php">?&gt;</span></div></li>
+</ol>
+</div>
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Fri, 03 Nov 2006 10:09:50 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.3.0RC6</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!--
+    NOTE THAT WE'RE NOT DEFINING NEITHER <FORM></FORM> AND <INPUT TYPE="HIDDEN" NAME="MAX_FILE_SIZE">
+    BOTH BEING IN THE MAIN TEMPLATE IN THE /TEMPLATES FOLDER
+-->
+
+<!-- BEGIN: main -->
+<table aling=center border=0 bgcolor='#E8F2FC' width=100%> 
+  <tr bgcolor='#A4B4C1'><td colspan=5 align=left><strong><font size=3>Datos De la Liquidación</font></strong></td><tr bgcolor='#E8F2FC'>
+   <td align="left">{controls.label_fechaegreso}:&nbsp;</td>
+   <td align="left">{controls.fechaegreso}</td> 
+   <td align="left">{errors.e4}</td></tr> 
+  <tr></tr> <td align="left">{controls.label_tipo}:&nbsp;</td>
+    <td align="left">{controls.tipo}</td>
+    <td align="left">{errors.e1}</td>
+  <tr><td align="left" width="40%">{controls.label_preaviso}:&nbsp;</td>
+      <td align="left">{controls.preaviso}</td> 
+      <td align="right" width="40%">{controls.label_vacacion}:&nbsp;</td>
+     <td aling="left">{controls.vacacion}</td>
+  <tr>
+   <th width="30%"><td width="10%"></td>
+    <td align="right" width="80%">{controls.submit_totalizar}</td>
+    <td align="right" width="80%">{controls.submit_calcular}</td>
+    <td align="left" width="10%">{controls.submit_guardar}</td></th>
+  </tr>
+     
+</table>
+<!-- END: main -->

@@ -1,0 +1,28 @@
+<!--
+    NOTE THAT WE'RE NOT DEFINING NEITHER <FORM></FORM> AND <INPUT TYPE="HIDDEN" NAME="MAX_FILE_SIZE">
+    BOTH BEING IN THE MAIN TEMPLATE IN THE /TEMPLATES FOLDER
+-->
+
+<!-- BEGIN: main -->
+
+<table aling="center" border="0" bgcolor="#E8F2FC" width="100%"> 
+ <tr><th align="left">{controls.label_ano}:&nbsp;</th>
+     <th align="left">{controls.ano}</th>
+ <!-- BEGIN: e1 -->
+     <th align="left">{errors.e1}</th></tr>    
+ <!-- END: e1 -->
+ <tr><th align="left">{controls.label_mes}:&nbsp;</th>
+     <th align="left">{controls.mes}</th>
+ <!-- BEGIN: e2 -->
+     <th aling="left">{errors.e2}</th></tr>
+ <!-- END: e2 -->  
+<tr><th align="left">{controls.label_situacion}:&nbsp;</th>
+     <th align="left">{controls.situacion}</th>
+ <!-- BEGIN: e3 -->
+     <th aling="left">{errors.e3}</th></tr>
+ <!-- END: e3 -->  
+ <tr><td><th align="right">{controls.submit_aceptar}</th>
+         <th align="left">{controls.reset_cancelar}</th>
+     </td></tr>
+</table>
+<!-- END: main -->

@@ -1,0 +1,27 @@
+Zebra PHP Framework
+
+PHP DatePicker Class
+
+author     Stefan Gabos, ix at nivelzero dot ro
+version    1.0.3 (last revision: November 03, 2006)
+copyright  (c) 2006 Stefan Gabos
+
+This PHP class provides access to a date picker
+
+    -   provides a very nice and intuitive date picker
+    -   you can set what month and/or year to show by default
+    -   you can set mark a day as selected by default
+    -   you can set specific date ranges from where the user can choose from
+    -   you can set the format of the date to be returned
+    -   you can set any day to be taken as the starting day of the week
+    -   everything is template driven and highly customizable
+    -   supports localisation
+    -   the code is heavily documented so you can easily understand every aspect of it
+
+Read the manual for more information and check out the example to see it at work!
+
+This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 2.5 License.
+To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/2.5/ or send
+a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+For more resources visit http://stefangabos.blogspot.com

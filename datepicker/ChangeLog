@@ -1,0 +1,34 @@
+version 1.0.3 (November 03, 2006)
+
+    -   fixed major security issue where an atacker could include
+        random scripts
+    -   if the datepicker was called with the onclick event of an
+        "image" input type from a form, the form got submitted
+    -   added romanian language translation
+    -   added slovenian language translation (thanks to Damjan Leban)
+
+version 1.0.2 (October 11, 2006)
+
+    -   you can now set specific date ranges from where the user can
+        pick a date thus restricting him from choosing wrong dates
+        (see the manual for the new selectableRange property)
+    -   added italian language translation (thanks to Raffaele Turra)
+    -   added french language translation (thanks to Youri Lacan-Bartley)
+    
+version 1.0.1 (September 04, 2006)
+
+    -   the datePicker now pops up as a modal window (it will stay on top of
+        other windows until closed) and will also have the focus by default
+        (thanks Johan van Ieperen)
+    -   added the possibility to define for each language how the abbreviations
+        for names of months and days should be (thanks Johan van Ieperen)
+    -   the manual was confusing about how to use another language file
+    -   fixed a bug that would scramble up days on months where first day of the
+        week was on a Sunday
+    -   added german language translation (thanks to Wassilios Meletiadis)
+    -   added dutch language translation (thanks to Johan van Ieperen)
+
+version 1.0 (August 22, 2006)
+
+    -   initial release
+

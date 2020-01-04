@@ -1,0 +1,36 @@
+<!--
+    NOTE THAT WE'RE NOT DEFINING NEITHER <FORM></FORM> AND <INPUT TYPE="HIDDEN" NAME="MAX_FILE_SIZE">
+    BOTH BEING IN THE MAIN TEMPLATE IN THE /TEMPLATES FOLDER
+-->
+
+<!-- BEGIN: main -->
+<table aling="center" border="0" bgcolor="#E8F2FC" width="100%"> 
+ <tr><th align="left">{controls.label_fechatasa}:&nbsp;</th>
+     <th align="left">{controls.fechatasa}</th>
+ <!-- BEGIN: e1 -->
+     <th align="left">{errors.e1}</th></tr>    
+ <!-- END: e1 -->
+ <tr><th align="left">{controls.label_resolucion}:&nbsp;</th>
+     <th align ="left">{controls.resolucion}</th>
+ <!-- BEGIN: e2 -->
+     <th align="left">{errors.e2}</th></tr> 
+ <!-- END: e2 -->   
+ <tr><th align="left">{controls.label_activa}:&nbsp;</th>
+     <th align="left">{controls.activa}</th>
+ <!-- BEGIN: e3 -->
+     <th align="left">{errors.e3}</th></tr>
+ <!-- END: e3 -->  
+ <tr><th align="left">{controls.label_pasiva}:&nbsp;</th>
+     <th align="left">{controls.pasiva}</th>
+ <!-- BEGIN: e4 -->
+     <th align="left">{errors.e4}</th></tr>
+ <!-- END: e4 -->    
+ <tr><th align="left">{controls.label_promedio}:&nbsp;</th>>
+     <th align="left">{controls.promedio}</th>
+ <!-- BEGIN: e5 -->
+     <th align="left">{errors.e5}</td></tr>
+ <!-- END: e5 -->    
+ <tr><td><th align="right">{controls.submit_aceptar}</th>
+         <th align="left">{controls.reset_cancelar}</th></td></tr>
+</table>
+<!-- END: main -->

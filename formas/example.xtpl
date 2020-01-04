@@ -1,0 +1,100 @@
+<!--
+    NOTE THAT WE'RE NOT DEFINING NEITHER <FORM></FORM> AND <INPUT TYPE="HIDDEN" NAME="MAX_FILE_SIZE">
+    BOTH BEING IN THE MAIN TEMPLATE IN THE /TEMPLATES FOLDER
+-->
+
+<!-- BEGIN: main -->
+<table Border=1 Width=100%> 
+ <tr>
+     <th align="left">
+        {controls.label_resolucion}:&nbsp;
+     </th>
+     <th align="left">
+      {controls.resolucion}
+     </th>
+      <!-- BEGIN: e1 -->
+      <th align="center">
+        {errors.e1}
+      </th>
+   </tr>    
+    <!-- END: e1 -->
+    <tr>
+         <th valign="top">
+            {controls.label_fecharesolucion}:&nbsp;
+        </th>
+        <th>
+            {controls.fecharesolucion}
+        </th>
+     <!-- BEGIN: e6 -->
+      <th align="center">
+       {errors.e6}</th>
+    <!-- END: e6 -->   
+    <tr>
+        <th>
+            {controls.label_estado}:&nbsp;
+        </th>
+        <th>
+            {controls.estado}
+        </th>
+
+    <!-- BEGIN: e7 -->
+        <th>{errors.e7}</th>
+    </tr>
+    <!-- END: e7 -->  
+
+    <tr>
+        <td>
+            {controls.label_periodo}:&nbsp;
+        </td>
+        <td>
+            {controls.periodo}
+        </td>
+    </tr>
+    <!-- BEGIN: e8 -->
+    <tr>
+        <td></td>
+        <td>{errors.e8}</td>
+    </tr>
+    <!-- END: e8 -->    
+    <tr>
+        <td>
+            {controls.label_diasdisfrute}:&nbsp;
+        </td>
+        <td>
+            {controls.diasdisfrute}
+        </td>
+    </tr>
+    <!-- BEGIN: e9 -->
+    <tr>
+        <td></td>
+        <td>{errors.e9}</td>
+    </tr>
+    <!-- END: e9 -->    
+    <tr>
+        <td>
+            {controls.label_diaspagados}:&nbsp;
+        </td>
+        <td>
+            {controls.diaspagados}
+        </td>
+    </tr>
+    <!-- BEGIN: e10 -->
+    <tr>
+        <td></td>
+        <td>{errors.e10}</td>
+    </tr>
+    <!-- END: e10 -->    
+    </tr>
+    <tr>
+        <td>
+        <th align="right">
+            {controls.submit_aceptar}
+        </th>
+        </th>
+        <th align="left">
+            {controls.reset_cancelar}
+        </th>
+        </td>
+    </tr>
+</table>
+<!-- END: main -->

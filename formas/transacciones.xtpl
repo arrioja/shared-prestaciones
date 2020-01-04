@@ -1,0 +1,10 @@
+<!--
+    NOTE THAT WE'RE NOT DEFINING NEITHER <FORM></FORM> AND <INPUT TYPE="HIDDEN" NAME="MAX_FILE_SIZE">
+    BOTH BEING IN THE MAIN TEMPLATE IN THE /TEMPLATES FOLDER
+-->
+
+<!-- BEGIN: main -->
+<table aling=center border=0 bgcolor='#E8F2FC' width=100%> 
+<tr><td align="right" width="80%">{controls.submit_consultar}</td></tr>   
+</table>
+<!-- END: main -->

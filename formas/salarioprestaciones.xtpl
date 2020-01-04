@@ -1,0 +1,25 @@
+<!--
+    NOTE THAT WE'RE NOT DEFINING NEITHER <FORM></FORM> AND <INPUT TYPE="HIDDEN" NAME="MAX_FILE_SIZE">
+    BOTH BEING IN THE MAIN TEMPLATE IN THE /TEMPLATES FOLDER
+-->
+
+<!-- BEGIN: main -->
+<table aling=center border=0 bgcolor='#E8F2FC' width=100%> 
+  <tr bgcolor='#A4B4C1'><td colspan=5 align=left><strong><font size=3>Datos del Salario</font></strong></td><tr bgcolor='#E8F2FC'>
+    <td align="left">{controls.label_fechadesde}:&nbsp;</td>
+    <td align="left">{controls.fechadesde}</td>
+    <td align="left">{errors.e1}</td>
+  <tr><td align="left">{controls.label_fechahasta}:&nbsp;</td>
+      <td align="left">{controls.fechahasta}</td> 
+      <td align="left">{errors.e2}</td></tr> 
+  <tr><td align="left">{controls.label_monto}:&nbsp;</td>
+     <td aling="left">{controls.monto}</td>
+    <th align="left">{errors.e3}</th></tr>
+  <tr>
+   <th width="30%"><td width="10%"></td>
+    <td align="right" width="80%">{controls.submit_procesar}</td>
+    <td align="left" width="10%">{controls.submit_generar}</td></th>
+  </tr>
+     
+</table>
+<!-- END: main -->

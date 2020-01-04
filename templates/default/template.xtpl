@@ -1,0 +1,11 @@
+<!-- BEGIN: main -->
+<link rel="stylesheet" href="{templatePath}/style.css" type="text/css" />
+<script language="JavaScript" type="text/javascript" src="{templatePath}/htmlform_jscript.js"></script>
+<form name="{formName}" method="{formMethod}" {enctype}>
+    <input type="hidden" name="HTMLForm_formname" value="{formName}" />
+    <!-- BEGIN: file_upload -->
+    <input type="hidden" name="MAX_FILE_SIZE" value="{maxFileSize}" />
+    <!-- END: file_upload -->
+    {content}
+</form>
+<!-- END: main -->
